@@ -26,7 +26,7 @@ def get_pw(username):
 
 
 @app.route('/ping', methods=['GET'])
-# @auth.login_required
+@auth.login_required
 def pingService ():
     pingAPP = requests.get('https://valpongservice.herokuapp.com/pong')
 
